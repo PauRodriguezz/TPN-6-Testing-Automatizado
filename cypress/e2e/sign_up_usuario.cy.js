@@ -12,5 +12,14 @@ describe('Button Tests', () => {
       cy.url().should('include', '/addUser');
     });
 
+    //Segundo Test
+    it('Confirme que el texto del botón sea claramente legible e indique correctamente "Sign up".', () => {
+      cy.get('button')  // Asegúrate de usar el selector correcto para el botón "Sign up"
+        .should('be.visible')
+        .and('contain', 'Sign up');  // Verifica que el texto del botón sea "Sign up"
+    });
+
   });
+
+
   
