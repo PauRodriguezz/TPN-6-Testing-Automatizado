@@ -59,3 +59,20 @@ describe('Validación del campo de correo electrónico', () => {
         getEmailValue().should('eq', invalidEmail);
     });
 });
+
+//facundo
+
+describe('Check Placeholder Text for City Input Field', () => {
+    beforeEach(() => {
+        // Navigate to the page
+        cy.visit('https://thinking-tester-contact-list.herokuapp.com/addContact');
+    });
+
+    it('Check that the placeholder text "City" is displayed when the input field is empty', () => {
+        // Target the city input field and verify the placeholder
+        cy.get('#city')
+            .should('have.attr', 'placeholder', 'City');
+    });
+});
+
+
